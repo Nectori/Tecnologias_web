@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body {
+    background-color: rgb(134, 134, 134);
+}
+
+.square {
+    width: 600px;
+    height: 650px;
+    background-color: transparent;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 150px;
+}
+
+.square img {
+    max-width: 60%;
+    max-height: 60%;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    margin-bottom: 30px;
+}
+
+.square p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.square h1 {
+    color: black;
+    margin-bottom: 30px;
+}
+
+.square img:hover {
+    transform: scale(1.1);
+    border-radius: 0;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-2px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.square p:hover {
+    animation: shake 0.5s;
+}
